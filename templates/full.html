@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <body>
+
+        <div class="introduction">
+            <div class="bkgdImage">
+                <img src="C:\Users\anann\OneDrive\Documents\Technica\header.jpg" alt="Top Image" width="1500" height="480">
+            </div>
+            <h1 class="header"> Diabetes Predictor </h1><br>
+        </div>
+        <br>
+
+        <div class="questions">
+            <!--height and weight-->
+            <label for="height" class="indicator_label"> Enter your height in inches: </label>
+            <input type="text" id="height" class="indicator">
+            <br><br>
+            <label for="weight" class="indicator_label"> Enter your weight in pounds: </label>
+            <input type="text" id="weight" class="indicator">
+            <br><br>
+            <label for="age" class="indicator_label"> Enter your age: </label>
+            <input type="text" id="age" class="indicator">
+            
+            <!--sex-->
+            <p class="indicator_label">Choose Sex: </p>
+            <input type="checkbox" value="Yes" id="sex_f">
+            <label for="sex_f" class="indicator_label">F</label>
+            <br>
+            <input type="checkbox" value="Yes" id="sex_m">
+            <label for="sex_m" class="indicator_label">M</label>
+
+            <!--cigarettes-->
+            <p class="indicator_label">Have you smoked at least 100 cigarettes in your entire life? (If no, go on.) </p>
+            <input type="checkbox" value="Yes" id="smoking_yes">
+            <label for="smoking_yes" class="indicator_label">Yes</label>
+            
+            <!--heart disease-->
+            <p class="indicator_label">Do you have heart disease/have had a heart attack? (If no, go on.) </p>
+            <input type="checkbox" value="Yes" id="heart_yes">
+            <label for="heart_yes" class="indicator_label">Yes</label>
+
+            <!--high cholesterol-->
+            <p class="indicator_label">Do you have high cholesterol? (above 200 mg/dL) (If no, go on.) </p>
+            <input type="checkbox" value="Yes" id="cholesterol_yes">
+            <label for="cholesterol_yes" class="indicator_label">Yes</label>
+            <br><br>
+            <button type="submit" value="submit" id="submit">Submit</button>
+        </div>
+
+
+
+
+
+
+    </body>
+</html>

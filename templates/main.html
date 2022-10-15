@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <body>
+
+        <div class="introduction">
+            <div class="bkgdImage">
+                <img src="Technica_2022/header.jpg" alt="Top Image" width="1499" height="480">
+        </div>
+        <h1> Diabetes Predictor </h1><br>
+      </div>
+       <form class="justify-content-center form-inline" method="POST" action="{{ url_for('results') }}">
+
+        <!--height and weight-->
+        <label for="height" class="indicator_label"> Enter your height in inches: </label>
+        <input name="height" type="text" id="height" class="indicator">
+        <br><br>
+        <label for="weight" class="indicator_label"> Enter your weight in pounds: </label>
+        <input name="weight" type="text" id="weight" class="indicator">
+        <br><br>
+        <label for="age" class="indicator_label"> Enter your age: </label>
+        <input name="age" type="text" id="age" class="indicator">
+        
+        <!--sex-->
+        <p class="indicator_label">Choose Sex: </p>
+        <input name="sex" type="radio" value=0 id="sex_f">
+        <label for="sex_f" class="indicator_label">F</label>
+        <br>
+        <input name="sex" type="radio" value=1 id="sex_m">
+        <label for="sex_m" class="indicator_label">M</label>
+
+        <!--cigarettes-->
+        <p class="indicator_label">Have you smoked at least 100 cigarettes in your entire life? (If no, go on.) </p>
+        <input name="smoking" type="checkbox" value=1 id="smoking_yes">
+        <label for="smoking_yes" class="indicator_label">Yes</label>
+        
+        <!--heart disease-->
+        <p class="indicator_label">Do you have heart disease/have had a heart attack? (If no, go on.) </p>
+        <input name="heart_condition" type="checkbox" value=1 id="heart_yes">
+        <label for="heart_yes" class="indicator_label">Yes</label>
+
+        <!--high bp-->
+        <p class="indicator_label">Do you have high blood pressure? (If no, go on.) </p>
+        <input name="bp" type="checkbox" value=1 id="heart_yes">
+        <label for="heart_yes" class="indicator_label">Yes</label>
+
+        <!--high cholesterol-->
+        <p class="indicator_label">Do you have high cholesterol? (If no, go on.) </p>
+        <input name="cholesterol" type="checkbox" value=1 id="heart_yes">
+        <label for="heart_yes" class="indicator_label">Yes</label>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+    </body>
+</html>
