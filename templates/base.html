@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <div class="introduction">
+        <div class="bkgdImage">
+            <img src="{{ url_for('static', filename='/header.jpeg') }}" alt="Top Image" width="1500" height="480">
+        </div>
+        <h1 class="header"> Smart Diabetech </h1><br>
+    </div>
+    <div>{% block content %} {% endblock %}</div>
+ </html>

@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+{% extends "base.html" %}
+{% block content %}
     <body>
-        <p>here were the results of the five nearest data points:</p>
+        <p>Your result:</p>
         <p>{{nn_res}}</p>
         <br>
+        <p>Confidence level:</p>
+        <p>{{clevel}}%</p>
     </body>
-</html>
+{% endblock %}

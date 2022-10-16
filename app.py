@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 import pickle, os
 import numpy as np
 import pandas as pd
+from scipy import stats
 
 app_version = '1.1.0'
 
@@ -21,9 +22,12 @@ def results():
         responses.pop('weight')
         nn = pickle.load(open('./nnmodel.pkl', 'rb'))
         data = [1 if x=="1" else x for x in responses.values()]
-        data = [0 if x==None or x=="0" else x for x in responses.values()]
-        outp = np.array([pd.read_csv('y.csv')['Diabetes_012'].iloc[x] for x in nn.kneighbors(np.array(data).reshape(1,-1))[1]])
-        return render_template('data_test.html', nn_res=outp)
+        scl = pickle.load(open('scaler.sav', 'rb'))
+        data = scl.transform(np.array([0 if x==None or x=="0" else x for x in responses.values()]).reshape(1,-1))
+        outp = np.array([pd.read_csv('y.csv')['Diabetes_012'].iloc[x] for x in nn.kneighbors(data)[1]][0])
+        mode = stats.mode(outp)
+
+        return render_template('data_test.html', nn_res=list(outp)[int(mode[0])], clevel=(int(mode[1])/5.0)*100)
     else:
         return redirect('/')
 
@@ -34,4 +38,4 @@ def calc_bmi(lbs, height):
     return kg / (m*m)
 
 if __name__ == '__main__':
-    app.run(threaded=True, port=int(os.environ.get("PORT")))
+    app.run(port=int(os.environ.get("PORT")))
