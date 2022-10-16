@@ -1,0 +1,37 @@
+body {
+    font-family: 'Lato', serif;
+    color: white;   
+    background: black;
+}
+
+#height, #weight, #age {
+    color:black;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.indicator_label {
+    font-family: 'Lato', serif;
+    color: white;
+    font-size: 24px;
+}
+
+h1 {
+    color: white;
+    font-family: 'Merriweather';
+}
+
+.bkgdImage{
+    opacity: 0.5;
+}
+
+.header {
+    color: transparent;
+    font-size: 6em;
+    -webkit-text-stroke: 0.3px white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 250px;
+}

@@ -1,1 +1,11 @@
-<p>{{smok_resp}}</p>
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <body>
+        <p>here were the results of the five nearest data points:</p>
+        <p>{{nn_res}}</p>
+        <br>
+    </body>
+</html>

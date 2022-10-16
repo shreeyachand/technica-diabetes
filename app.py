@@ -23,7 +23,7 @@ def results():
         data = [1 if x=="1" else x for x in responses.values()]
         data = [0 if x==None or x=="0" else x for x in responses.values()]
         outp = np.array([pd.read_csv('y.csv')['Diabetes_012'].iloc[x] for x in nn.kneighbors(np.array(data).reshape(1,-1))[1]])
-        return render_template('data_test.html', smok_resp=outp)
+        return render_template('data_test.html', nn_res=outp)
     else:
         return redirect('/')
 

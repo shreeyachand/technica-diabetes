@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
     <body>
 
         <div class="introduction">
             <div class="bkgdImage">
-                <img src="Technica_2022/header.jpg" alt="Top Image" width="1499" height="480">
+                <img src="{{ url_for('static', filename='/header.jpeg') }}" alt="Top Image" width="1500" height="480">
+            </div>
+            <h1 class="header"> Diabetes Predictor </h1><br>
         </div>
-        <h1> Diabetes Predictor </h1><br>
-      </div>
+      <div class="questions">
        <form class="justify-content-center form-inline" method="POST" action="{{ url_for('results') }}">
 
         <!--height and weight-->
@@ -50,9 +51,10 @@
         <p class="indicator_label">Do you have high cholesterol? (If no, go on.) </p>
         <input name="cholesterol" type="checkbox" value=1 id="heart_yes">
         <label for="heart_yes" class="indicator_label">Yes</label>
-
+        <br><br>
         <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </div>
 
 
     </body>
