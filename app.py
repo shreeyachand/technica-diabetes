@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-import pickle
+import pickle, os
 import numpy as np
 import pandas as pd
 
@@ -34,4 +34,4 @@ def calc_bmi(lbs, height):
     return kg / (m*m)
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(threaded=True, port=int(os.environ.get("PORT")))

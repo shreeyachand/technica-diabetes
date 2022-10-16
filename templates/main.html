@@ -9,24 +9,24 @@
             <div class="bkgdImage">
                 <img src="{{ url_for('static', filename='/header.jpeg') }}" alt="Top Image" width="1500" height="480">
             </div>
-            <h1 class="header"> Diabetes Predictor </h1><br>
+            <h1 class="header"> Smart Diabetech </h1><br>
         </div>
       <div class="questions">
        <form class="justify-content-center form-inline" method="POST" action="{{ url_for('results') }}">
 
         <!--height and weight-->
         <label for="height" class="indicator_label"> Enter your height in inches: </label>
-        <input name="height" type="text" id="height" class="indicator">
+        <input name="height" type="text" id="height" class="indicator" required>
         <br><br>
         <label for="weight" class="indicator_label"> Enter your weight in pounds: </label>
-        <input name="weight" type="text" id="weight" class="indicator">
+        <input name="weight" type="text" id="weight" class="indicator" required>
         <br><br>
         <label for="age" class="indicator_label"> Enter your age: </label>
-        <input name="age" type="text" id="age" class="indicator">
+        <input name="age" type="text" id="age" class="indicator" required>
         
         <!--sex-->
         <p class="indicator_label">Choose Sex: </p>
-        <input name="sex" type="radio" value=0 id="sex_f">
+        <input name="sex" type="radio" value=0 id="sex_f" required>
         <label for="sex_f" class="indicator_label">F</label>
         <br>
         <input name="sex" type="radio" value=1 id="sex_m">
