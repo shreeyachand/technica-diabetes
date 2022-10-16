@@ -6,5 +6,23 @@
         <br>
         <p>Confidence level:</p>
         <p>{{clevel}}%</p>
+        <br><br><br>
+        <!--faq--->
+        <h2> FAQ </h2>
+        <ol>
+            <li>What do the numbers 0, 1, and 2 mean?</li>
+            <p>They represent different types of diabetes. 0 means no diabetes, 1 means prediabetes, and 2 means diabetes.</p>
+            <p>The more often a 1 or 2 appears in the results, the higher the risk of the user developing diabetes in the future.</p>
+            <li>What factors are used in the model?</li>
+            <p>The factors we used are height, weight, age, sex, history of smoking, high cholesterol, high blood pressure, and heart disease.</p>
+            <li>What data is the model based on?</li>
+            <p>We used a data set from Kaggle <a href="https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset">(BRFSS 2015)</a></p>
+            <p>We used a K-nearest neighbors algorithm, comparing user-entered data to that of hundreds of thousands of people in the dataset. It returns the most common result of the five people whose data is closest to the user's. The confidence level is the percentage of the "neighbors" who obtained the returned result.</p>
+            <p><b>Disclaimer: Do not rely on this tool completely! There are many other factors that contribute to diabetes that this model does not cover. Talk to your doctor about your health and diabetes risk.</b></p>
+        </ol>
+
+        <br><br><br><br>
+        <p id="end">This website was designed by Anannya Trehan and Shreeya Chand.</p>
+
     </body>
 {% endblock %}
